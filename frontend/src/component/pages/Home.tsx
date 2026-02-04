@@ -1,23 +1,15 @@
 // import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import Button from "../common/Button";
 
 const Home = () => {
-    return (
+  return (
     <div>
-        <h1>ホーム画面</h1>
-        <Button
-            style={{
-                padding: "8px 16px",
-                borderRadius: "4px",
-                border: "1px solid #ccc",
-                backgroundColor: "#f5f5f5",
-                cursor: "pointer",
-                fontSize: "14px",
-            }}>
-                ボタン
-        </Button>
+      <h1>ホーム画面</h1>
+      <Link to="/tasks/register">
+        <Button>タスク登録画面</Button>
+      </Link>
     </div>
-    );
-}
+  );
+};
 export default Home;

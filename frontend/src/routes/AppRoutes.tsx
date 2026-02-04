@@ -6,7 +6,8 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/tasklist" element={<TaskList />} />
+      <Route path="/tasks/list" element={<TaskList />} />
+      <Route path="/tasks/register" element={<TaskList />} />
     </Routes>
   );
 }
