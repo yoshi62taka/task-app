@@ -1,0 +1,1 @@
+export type BaseInputTextProps = React.InputHTMLAttributes<HTMLInputElement>;

@@ -8,3 +8,38 @@
   color: #ffffff;
   cursor: pointer;
 }
+
+/* Input-Text.module.css */
+.input-text {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #111;
+  background-color: #fdfefe;
+
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.input-text::placeholder {
+  color: #8c959f;
+}
+
+.input-text:focus {
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+}
+
+.input-text:disabled {
+  background-color: #f6f8fa;
+  color: #8c959f;
+  cursor: not-allowed;
+}
