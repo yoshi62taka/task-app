@@ -2,9 +2,12 @@ package com.example.backend.controller;
 
 import java.util.List;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.backend.DTO.TaskCreateRequest;
 import com.example.backend.entity.Task;
 import com.example.backend.service.TaskService;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/tasks")
 public class TaskController {
@@ -21,7 +24,7 @@ public class TaskController {
     }
 
     @PostMapping
-    public Task createTask(@RequestBody Task task) {
+    public Task createTask(@RequestBody TaskCreateRequest task) {
         return taskService.createTask(task);
     }
 
