@@ -6,9 +6,9 @@ const Home = () => {
   return (
     <div>
       <h1>ホーム画面</h1>
-      <Link to="/tasks/register">
-        <Button>タスク登録画面</Button>
-      </Link>
+      <Button as={Link} to="/tasks/register">
+        タスク登録画面
+      </Button>
     </div>
   );
 };

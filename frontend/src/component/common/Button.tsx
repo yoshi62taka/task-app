@@ -1,12 +1,18 @@
-import React from "react";
-import { BaseButtonProps } from "../../types/ButtonProps";
+import React, { ElementType } from "react";
 import "../../styles/common.css";
+import { BaseButtonProps } from "../../types/ButtonProps";
 
-const Button = ({ children, ...rest }: BaseButtonProps) => {
+const Button = <T extends ElementType = "button">({
+  as,
+  children,
+  ...rest
+}: BaseButtonProps<T>) => {
+  const Component = as || "button";
+
   return (
-    <button className="button" {...rest}>
+    <Component className="submit-button" {...rest}>
       {children}
-    </button>
+    </Component>
   );
 };
 
