@@ -1,0 +1,67 @@
+/* ===== table 基本設定 ===== */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* ←幅固定の最重要設定 */
+}
+
+/* ===== ヘッダ共通 ===== */
+.task-header th {
+  padding: 8px 12px;
+  border-bottom: 2px solid #ccc;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* ===== ボディ共通 ===== */
+.task-list td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+/* ===== 列幅設定 ===== */
+.header-task-title {
+  width: auto;
+}
+
+.header-task-created-at {
+  width: 220px;
+}
+
+.header-task-operation {
+  width: 100px;
+}
+
+/* ===== タイトル省略表示 ===== */
+.task-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ===== 日付右寄せ ===== */
+.task-created-at {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===== 操作中央寄せ ===== */
+.task-operation {
+  text-align: justify;
+}
+
+/* ===== ボタン ===== */
+.delete-button {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #dad8e0bd;
+  background-color: #082385d3;
+  font-size: 14px;
+  cursor: pointer;
+}
+.delete-button:hover {
+  background-color: #cdd0dba4;
+  border-color: #cdd0dba4;
+}
