@@ -25,6 +25,7 @@ public class TaskService {
     public Task createTask(TaskCreateRequest newTask) {
         Task task = new Task();
         task.setTitle(newTask.getTitle());
+        task.setCreatedAt(newTask.getCreatedAt() != null ? newTask.getCreatedAt() : java.time.LocalDateTime.now());
         task.setCompleted(false);
         return taskRepository.save(task);
     }
