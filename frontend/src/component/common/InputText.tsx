@@ -1,5 +1,4 @@
-import React from "react";
-import { BaseInputTextProps } from "../../types/InputTextProps";
+import { BaseInputTextProps } from "../../types/InputTypeProps";
 
 const InputText = (props: BaseInputTextProps) => {
   return <input className="input-text" {...props} />;

@@ -5,8 +5,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.backend.DTO.TaskCreateRequest;
+import com.example.backend.DTO.TaskUpdateRequest;
 import com.example.backend.entity.Task;
 import com.example.backend.repository.TaskRepository;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @Service
 @Transactional
@@ -32,5 +35,12 @@ public class TaskService {
 
     public void deleteTask(Long id) {
         taskRepository.deleteById(id);
+    }
+
+    public Task updateTask(Long id, TaskUpdateRequest req) {
+        Task task = taskRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Task not found with id: " + id));
+        task.setCompleted(req.getCompleted());
+        return taskRepository.save(task);
     }
 }
