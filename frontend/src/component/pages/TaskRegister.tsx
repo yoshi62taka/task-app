@@ -17,6 +17,7 @@ const TaskRegister = ({
 
   return (
     <div className="task-register-container">
+      <h1>Task Register</h1>
       <form onSubmit={handleSubmit}>
         <InputText value={title} onChange={(e) => setTitle(e.target.value)} />
         <Button type="submit">Add Task</Button>

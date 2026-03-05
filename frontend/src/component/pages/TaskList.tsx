@@ -61,8 +61,8 @@ const TaskList = () => {
   return (
     <div className="task-list-container">
       <TaskRegister onSubmitTask={handleCreateTask} />
-      <SearchInput items={tasks} onSearch={setFilteredTasks} />
       <h1>Task List</h1>
+      <SearchInput items={tasks} onSearch={setFilteredTasks} />
       <table className="task-table">
         <thead>
           <tr className="task-header">
